@@ -23,8 +23,8 @@ func (hf HandlerFrame) GetEndHandler() func(w http.ResponseWriter, r *http.Reque
 	}
 }
 
-func NewHandlerFram(path string, exec func(interface{}), parser func(io.ReadCloser) (interface{}, error)) HandlerFrame {
-	return HandlerFrame{
+func NewHandlerFram(path string, exec func(interface{}), parser func(io.ReadCloser) (interface{}, error)) *HandlerFrame {
+	return &HandlerFrame{
 		HookPath: path,
 		Parser:   parser,
 		Exec:     exec,

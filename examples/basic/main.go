@@ -14,7 +14,7 @@ type ExpectedRecv struct {
 
 func main() {
 
-	ws := autowebhook.NewWebhookService([]autowebhook.HandlerFrame{
+	ws := autowebhook.NewWebhookService([]*autowebhook.HandlerFrame{
 		{
 			HookPath: "/test1",
 			Parser: func(bd io.ReadCloser) (interface{}, error) {
