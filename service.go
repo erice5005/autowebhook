@@ -7,11 +7,11 @@ import (
 )
 
 type WebhookService struct {
-	Handlers []HandlerFrame
+	Handlers []*HandlerFrame
 	r        *mux.Router
 }
 
-func NewWebhookService(handlers []HandlerFrame) WebhookService {
+func NewWebhookService(handlers []*HandlerFrame) WebhookService {
 	return WebhookService{
 		r:        mux.NewRouter(),
 		Handlers: handlers,

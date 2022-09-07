@@ -25,7 +25,7 @@ func main() {
 	sh := &SampleHandler{
 		Messages: make([]string, 0),
 	}
-	handlers := []autowebhook.HandlerFrame{
+	handlers := []*autowebhook.HandlerFrame{
 		{
 			HookPath: "/test1",
 			Parser:   ParseToSampleMessage,
